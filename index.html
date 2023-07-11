@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<!--Referances the style.css file -->
+<link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+    <h1>This is my calaulator </h1>
+    <!--create a center coninter , with assned background color  -->
+    <div class="container">
+    <!--create a center coninter  -->
+        <div class="calculator">
+            <form>
+                <div class = "display">
+                <!--display values prometed by user by each onclick values -->
+                    <input type="text" name="display">
+                </div>    
+                <div>
+                <!--input button each value -->
+                    <!--input operators value space to start a new -->
+                        <input type="button" value="AC" onclick="display.value = '' " class="operator">
+                        <!--Delete single string space from user  -->
+                        <input type="button" value="DC" onclick="display.value = display.value.toString().slice(0,-1)" class="operator">
+                        <!--input deciaml button point value -->
+                        <input type="button" value="."  onclick="display.value += '.' "class="operator">
+                        <!--input divider button -->
+                        <input type="button" value="/"  onclick="display.value += '/' "class="operator">
+                    </div>
+                    <div>
+                        <input type="button" value="7" onclick="display.value += '7' ">
+                        <input type="button" value="8"onclick="display.value += '8' ">
+                        <input type="button" value="9"onclick="display.value += '9' ">
+                        <!--input multiplcation button -->
+                        <input type="button" value="*"onclick="display.value += '*' " class="operator">
+                    </div>
+                    <div>
+                        <input type="button" value="4"onclick="display.value += '4' ">
+                        <input type="button" value="5"onclick="display.value += '5' ">
+                        <input type="button" value="6"onclick="display.value += '6' ">
+                        <!--input subtraction button -->
+                        <input type="button" value="-"onclick="display.value += '-' "class="operator">
+                    </div>
+                    <div>
+                        <input type="button" value="1"onclick="display.value += '1' ">
+                        <input type="button" value="2"onclick="display.value += '2' ">
+                        <input type="button" value="3"onclick="display.value += '3' ">
+                        <!--input addition button -->
+                        <input type="button" value="+"onclick="display.value += '+' "class="operator">
+                    </div>
+                    <div>
+                        <input type="button" value="00"onclick="display.value += '00' ">
+                        <input type="button" value="0"onclick="display.value += '0' ">
+                        <!--result operatonion from display text by user input  -->
+                        <input type="button" value="=" onclick="display.value = eval(display.value)" class="equals">
+                    </div>
+
+
+        </div>
+    </div>
+
+</body>
+</html>
